@@ -1,0 +1,127 @@
+//
+//  Program Name:             Lab3.cpp
+//  Course:                   CSE 1311/Section 01
+//  Student Name:             Dhruv Patel
+//  Assignment Number:        Lab-3
+//  Due Date:                 02/05/19
+//
+
+/* Purpose:
+ This program allows user to input R for rock, S for scissor, P for paper. Once the Inpute is made by user, it compares the Inpute to Computer's Inpute. To allow from computer we need #include <cstdlib> and #include <ctime> which randomly draws number which we need to conver 0 for R, 1 for S, 2 for P. IF-ELSE statements and Switch Statements were used to follow the choises.
+ */
+
+
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    
+    
+    string R,S,P;
+    string input;
+    
+    
+    cout << "Input R for rock, S for scissor, P for paper" << endl;
+    cin >> input;
+    cout << "" << endl;
+    
+    
+    //Random number by help of time
+    srand( (unsigned int) (time(0)));
+    
+    //random number betw 0 & 2
+    int comp = 0 + (rand() % 3);
+    
+    if(input == "R"){
+        
+        switch (comp){
+            case 0:
+                cout << "Computer Choose Rock \n";
+                cout << "User Choose Rock \n";
+                cout<< "Rock vs Rock \n"<<endl;
+                cout<<"  IT'S A TIE  \n";
+                break;
+                
+            case 1:
+                cout << "Computer Choose Scissor \n";
+                cout << "User Choose Rock \n";
+                cout<< "Rock crushes Scissor \n"<<endl;
+                cout<<"  YOU WON  \n";
+                break;
+                
+            case 2:
+                cout << "Computer Choose Paper \n";
+                cout << "User Choose Rock \n";
+                cout<< "Paper covers Rock \n"<<endl;
+                cout<<"  YOU LOSE  \n";
+                break;
+        }
+    }
+    
+    else if(input == "S"){
+        
+        switch (comp){
+            case 0:
+                cout << "Computer Choose Rock \n";
+                cout << "User Choose Scissor \n";
+                cout<< "Rock crushes Scissor \n"<<endl;
+                cout<<"  YOU LOSE  \n";
+                break;
+                
+            case 1:
+                cout << "Computer Choose Scissor \n";
+                cout << "User Choose Scissor \n";
+                cout<< "Scissor vs Scissor \n"<<endl;
+                cout<<"  IT'S A TIE  \n";
+                break;
+                
+            case 2:
+                cout << "Computer Choose Paper \n";
+                cout << "User Choose Scissor \n";
+                cout<< "Scissor cuts Paper \n"<<endl;
+                cout<<"  YOU WON \n";
+                
+        }
+    }
+    
+    else if(input == "P"){
+        
+        switch(comp){
+            case 0:
+                cout << "Computer Choose Rock \n";
+                cout << "User Choose Paper \n";
+                cout<< "Paper covers Rock \n"<<endl;
+                cout<<"  YOU WON  \n";
+                break;
+                
+            case 1:
+                cout << "Computer Choose Scissor \n";
+                cout << "User Choose Paper \n";
+                cout<< "Scissor cuts Paper \n"<<endl;
+                cout<<"  YOU LOSE  \n";
+                break;
+                
+            case 2:
+                cout << "Computer Choose Paper \n";
+                cout << "User Choose Paper \n";
+                cout<< "Paper vs Paper \n"<<endl;
+                cout<<"  IT'S A TIE \n";
+                break;
+        }
+    }
+    
+    // Closing Statement
+    cout << "" << endl;
+    cout << "This Code is created by Dhruv Patel" << endl;
+    cout << "" << endl;
+    
+    return 0;
+}
+
+
+
+
+
