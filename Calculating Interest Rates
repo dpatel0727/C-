@@ -1,0 +1,112 @@
+//
+//  Program Name:             Lab2.cpp
+//  Course:                   CSE 1311/Section 01
+//  Student Name:             Dhruv Patel
+//  Assignment Number:        Lab-2
+//  Due Date:                 01/22/19
+//
+
+/* Purpose:
+ This program allows user to input 4 values and print 4 values as output such as P,r,n,t. This code also calculates
+ the amount of money paid back after following years with interest included. The formula used here is P * (pow(1 + (r/n), (n*t))). Also for this lab we had to use #include <cmath> to input all the math operations and #include <iomanip> to formate decimal places.
+
+ */
+
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+   
+    // Declaring The Variables
+    double P, r, n, t;
+    double A;
+    
+    // Prompting Input From User
+    cout << "Principle Amount (P): " << endl;
+    cin >> P;
+    
+    cout << "Rate of Interest (r): " << endl;
+    cin >> r;
+    
+    cout << "Number of times the interest is compounded (t): " << endl;
+    cin >> t;
+    
+    cout << "Number of years the amount is borrowed (n): " << endl;
+    cin >> n;
+    
+    // Calculation
+    A = P * (pow(1 + (r/n), (n*t)));
+    
+    // Print Out The Outputs
+    
+    cout << "" << endl;
+    cout << "" << endl;
+    cout << "Answer with no formatting: " << endl;
+    cout << "" << endl;
+    cout << "Principle Amount (P) is inputed as " << P << endl;
+    cout << "" << endl;
+    cout << "Rate of Interest (r) is inputed as " << r << endl;
+    cout << "" << endl;
+    cout << "Number of times the interest is compounded (t) is inputed as " << t << endl;
+    cout << "" << endl;
+    cout << "Number of years the amount is borrowed (n) is inputed as " << n << endl;
+    cout << "" << endl;
+    cout << "The Result is " << A << endl;
+    cout << "" << endl;
+    
+    cout << "" << endl;
+    cout << "" << endl;
+    cout << "Answer with fixed formatting: " << endl;
+    cout << "" << endl;
+    cout << fixed << "Principle Amount (P) is inputed as " << P << endl;
+    cout << "" << endl;
+    cout << "Rate of Interest (r) is inputed as " << r << endl;
+    cout << "" << endl;
+    cout << "Number of times the interest is compounded (t) is inputed as " << t << endl;
+    cout << "" << endl;
+    cout << "Number of years the amount is borrowed (n) is inputed as " << n << endl;
+    cout << "" << endl;
+    cout << "The Result is " << A << endl;
+    cout << "" << endl;
+    
+    cout << "" << endl;
+    cout << "" << endl;
+    cout << "Answer with fixed formatting with two decimal places: " << endl;
+    cout << "" << endl;
+    cout << setprecision(2) << "Principle Amount (P) is inputed as " << P << endl;
+    cout << "" << endl;
+    cout << "Rate of Interest (r) is inputed as " << r << endl;
+    cout << "" << endl;
+    cout << "Number of times the interest is compounded (t) is inputed as " << t << endl;
+    cout << "" << endl;
+    cout << "Number of years the amount is borrowed (n) is inputed as " << n << endl;
+    cout << "" << endl;
+    cout <<  "The Result is " << A << endl;
+    cout << "" << endl;
+    
+    cout << "" << endl;
+    cout << "" << endl;
+    cout << "Answer with scientific with four decimal places: " << endl;
+    cout << "" << endl;
+    cout << scientific << setprecision(4) << "Principle Amount (P) is inputed as " << P << endl;
+    cout << "" << endl;
+    cout << "Rate of Interest (r) is inputed as " << r << endl;
+    cout << "" << endl;
+    cout << "Number of times the interest is compounded (t) is inputed as " << t << endl;
+    cout << "" << endl;
+    cout << "Number of years the amount is borrowed (n) is inputed as " << n << endl;
+    cout << "" << endl;
+    cout << "The Result is " << A << endl;
+    cout << "" << endl;
+    
+    
+    // Closing Statement
+    cout << "" << endl;
+    cout << "This Code is created by Dhruv Patel" << endl;
+    cout << "" << endl;
+    
+    return 0;
+}
